@@ -6,11 +6,13 @@ module.exports = {
   entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "docs"),
-    filename: "index.js",
+    filename: "index.[hash].js",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
+      template: './index.html',
+      filename: 'index.[hash].html',
+      inject: 'head'
     })
   ],
   mode: "production"
