@@ -7,10 +7,13 @@ fileUploader.addEventListener('change', (event) => {
   const file = event.target.files[0];
   results.style.opacity = 1;
 
+  console.log(file);
+
   var img = document.querySelector("#original");
 
   img.onload = function() {
     wasm.then(bnw => {
+      console.log(bnw);
 
       const withLum = document.querySelector("#luminocity");
       withLum.src = bnw.grayscale_with_luminocity(img);
