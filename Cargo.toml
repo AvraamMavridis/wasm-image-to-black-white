@@ -1,7 +1,7 @@
 [package]
 name = "wasm-image-to-black-white"
-version = "0.1.1"
-authors = ["AvraamMavridis <avraammauridis@gmail.com>"]
+version = "0.2.0"
+authors = ["AvraamMavridis <avr.mav@gmail.com>"]
 edition = "2018"
 
 [lib]
