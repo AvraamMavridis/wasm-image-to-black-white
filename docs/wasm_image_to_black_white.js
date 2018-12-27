@@ -1,20 +1,6 @@
 /* tslint:disable */
 import * as wasm from './wasm_image_to_black_white_bg';
 
-const heap = new Array(32);
-
-heap.fill(undefined);
-
-heap.push(undefined, null, true, false);
-
-let stack_pointer = 32;
-
-function addBorrowedObject(obj) {
-    if (stack_pointer == 1) throw new Error('out of js stack');
-    heap[--stack_pointer] = obj;
-    return stack_pointer;
-}
-
 const lTextDecoder = typeof TextDecoder === 'undefined' ? require('util').TextDecoder : TextDecoder;
 
 let cachedTextDecoder = new lTextDecoder('utf-8');
@@ -29,6 +15,25 @@ function getUint8Memory() {
 
 function getStringFromWasm(ptr, len) {
     return cachedTextDecoder.decode(getUint8Memory().subarray(ptr, ptr + len));
+}
+
+export function __wbg_log_07f03d41a5b41b01(arg0, arg1) {
+    let varg0 = getStringFromWasm(arg0, arg1);
+    console.log(varg0);
+}
+
+const heap = new Array(32);
+
+heap.fill(undefined);
+
+heap.push(undefined, null, true, false);
+
+let stack_pointer = 32;
+
+function addBorrowedObject(obj) {
+    if (stack_pointer == 1) throw new Error('out of js stack');
+    heap[--stack_pointer] = obj;
+    return stack_pointer;
 }
 
 let cachedGlobalArgumentPtr = null;

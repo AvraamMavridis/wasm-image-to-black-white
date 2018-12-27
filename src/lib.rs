@@ -101,6 +101,8 @@ fn draw_image(img: &web_sys::HtmlImageElement, transform: &Fn(&Color) -> u8) -> 
 
     let _invisible_canvas = create_invisible_canvas();
     let _invisible_context = get_canvas_context(&_invisible_canvas);
+
+    log(&format!("{} {}", _width, _height));
     
     set_canvas_dimensions(&_invisible_canvas, _width, _height);
 

@@ -10,10 +10,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
-      filename: 'index.[hash].html',
+      template: './template.html',
+      filename: 'index.html',
       inject: 'head'
     })
   ],
-  mode: "production"
+  mode: "development"
 };
