@@ -1,4 +1,4 @@
-const wasm = import("./docs/wasm_image_to_black_white");
+const wasm = import("wasm-image-to-black-white");
 
 const fileUploader = document.querySelector("#uploadfile");
 const results = document.querySelector("#results");

@@ -19,7 +19,7 @@ Original Image
 `Gray = (Red + Green + Blue) / 3`
 
 ```js
-const wasm = import("wasm_image_to_black_white");
+const wasm = import("wasm-image-to-black-white");
 wasm.then(bnw => {
   img.src = bnw.grayscale_with_luminocity(img);
 });
@@ -32,7 +32,7 @@ wasm.then(bnw => {
 `Gray = (Red * 0.21 + Green * 0.72 + Blue * 0.07)`
 
 ```js
-const wasm = import("wasm_image_to_black_white");
+const wasm = import("wasm-image-to-black-white");
 wasm.then(bnw => {
   img.src = bnw.grayscale_with_average(img);
 });
