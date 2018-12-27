@@ -1,8 +1,11 @@
 [package]
 name = "wasm-image-to-black-white"
-version = "0.3.0"
+version = "0.3.1"
 authors = ["AvraamMavridis <avr.mav@gmail.com>"]
 edition = "2018"
+description = "Convert an image to black&white (various algorithms)"
+repository = "https://github.com/AvraamMavridis/wasm-image-to-black-white"
+keywords = ["wasm", "image", "black", "white", "bnw", "rust"]
 
 [lib]
 crate-type = ["cdylib"]
