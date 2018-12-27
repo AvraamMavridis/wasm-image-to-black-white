@@ -77,7 +77,9 @@
         <label>With average:</label>
         <pre><code class="javascript">
 const wasm = import("wasm_image_to_black_white");
-img.src = bnw.grayscale_with_luminocity(img);
+wasm.then(bnw => {
+  img.src = bnw.grayscale_with_average(img);
+});
           </code></pre>
         <img id="average" />
       </div>
@@ -85,7 +87,9 @@ img.src = bnw.grayscale_with_luminocity(img);
         <label>With luminocity:</label>
         <pre><code class="javascript">
 const wasm = import("wasm_image_to_black_white");
-img.src = bnw.grayscale_with_luminocity(img);
+wasm.then(bnw => {
+  img.src = bnw.grayscale_with_luminocity(img);
+});
           </code></pre>
         <img id="luminocity" />
       </div>
