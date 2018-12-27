@@ -80,8 +80,6 @@ fn draw_image(img: &web_sys::HtmlImageElement, transform: &Fn(&Color) -> u8) -> 
     let mut new_image_data: Vec<u8> = Vec::new();
 
     for (i, pixel) in pixels.iter().enumerate().step_by(4) {
-        let p = *pixel as u32;
-
         let red = pixels[i];
         let green = pixels[i+1];
         let black = pixels[i+2];
@@ -103,8 +101,10 @@ fn draw_image(img: &web_sys::HtmlImageElement, transform: &Fn(&Color) -> u8) -> 
 
     let _invisible_canvas = create_invisible_canvas();
     let _invisible_context = get_canvas_context(&_invisible_canvas);
-    _invisible_context.put_image_data(&new_image_data, 0.0, 0.0);
+    
+    set_canvas_dimensions(&_invisible_canvas, _width, _height);
 
+    _invisible_context.put_image_data(&new_image_data, 0.0, 0.0);
     _invisible_canvas.to_data_url_with_type("image/png").unwrap()
 }
 

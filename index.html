@@ -1,22 +1,96 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
   <title>Image to Black and white with WebAssembly (Rust)</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
+  <style>
+    body {
+      background-color: #36373c;
+    }
+
+    .control {
+      display: flex;
+      height: 100px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #results {
+      display: grid;
+      grid-template-columns: 100%;
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: bold;
+      color: #36373c;
+      margin-bottom: 10px;
+    }
+
+    .result {
+      background-color: #e0b370;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 10px;
+      width: auto;
+      padding: 20px;
+    }
+
+    #label-upload {
+      color: #e0b370;
+      font-size: 16px;
+      font-weight: normal;
+      margin: 0px;
+      margin-right: 15px;
+    }
+
+    input, button {
+      height: 30px;
+      border: none;
+    }
+  </style>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 
 <body>
-  <div>
-    <input type="file" id="uploadfile" /> 
+  <div class="control">
+    <label id="label-upload">Upload an image</label>
+    <input type="file" id="uploadfile" />
   </div>
   <div>
-    <canvas id="canvas" width="500" height="500"></canvas>
-    <canvas id="canvas2" width="500" height="500"></canvas>
+    <div id='results' style="opacity: 0;">
+      <div class="result">
+        <label>Original Image:</label>
+        <img id="original" />
+      </div>
+      <div class="result">
+        <label>With average:</label>
+        <pre><code class="javascript">
+const wasm = import("wasm_image_to_black_white");
+img.src = bnw.grayscale_with_luminocity(img);
+          </code></pre>
+        <img id="average" />
+      </div>
+      <div class="result">
+        <label>With luminocity:</label>
+        <pre><code class="javascript">
+const wasm = import("wasm_image_to_black_white");
+img.src = bnw.grayscale_with_luminocity(img);
+          </code></pre>
+        <img id="luminocity" />
+      </div>
+    </div>
   </div>
 </body>
+
 </html>

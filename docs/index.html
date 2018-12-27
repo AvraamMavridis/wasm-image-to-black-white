@@ -7,6 +7,20 @@
   <title>Image to Black and white with WebAssembly (Rust)</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
+  <style>
+    #results {
+      display: grid;
+      grid-template-columns: 100%;
+    }
+
+    .result {
+      width: 30%;
+    }
+  </style>
+  <link rel="stylesheet"
+  href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 
@@ -15,8 +29,21 @@
     <input type="file" id="uploadfile" /> 
   </div>
   <div>
-    <canvas id="canvas" width="500" height="500"></canvas>
-    <canvas id="canvas2" width="500" height="500"></canvas>
+    <div id='results' style="opacity: 0;">
+      <div class="result">
+        <label>Original Image:</label>
+        <img id="original" />
+      </div>
+      <div class="result">
+          <label>With average:</label>
+          <pre><code class="html">...</code></pre>
+          <img id="average" />
+      </div>
+      <div class="result">
+          <label>With luminocity:</label>
+          <img id="luminocity" />
+      </div>
+    </div>
   </div>
 <script type="text/javascript" src="index.js"></script></body>
 </html>

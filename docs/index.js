@@ -234,7 +234,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + {"./wasm_image_to_black_white_bg.wasm":"a224db41903acd44276f"}[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + {"./wasm_image_to_black_white_bg.wasm":"23263c79d60860b6201a"}[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 				if(importObject instanceof Promise && typeof WebAssembly.compileStreaming === 'function') {
 /******/ 					promise = Promise.all([WebAssembly.compileStreaming(req), importObject]).then(function(items) {
@@ -335,7 +335,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const js = Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./wasm_image_to_black_white */ \"./wasm_image_to_black_white.js\"));\n\nconst fileUploader = document.querySelector(\"#uploadfile\");\n\nfileUploader.addEventListener('change', (event) => {\n  const file = event.target.files[0];\n\n  var img = new Image;\n\n  img.onload = function() {\n    js.then(wasm => {\n      console.log(wasm.grayscale_with_luminocity(img));\n      console.log(wasm.grayscale_with_average(img));\n    });\n  }\n\n  img.src = URL.createObjectURL(file);\n})\n\n\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("const wasm = Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./wasm_image_to_black_white */ \"./wasm_image_to_black_white.js\"));\n\nconst fileUploader = document.querySelector(\"#uploadfile\");\nconst results = document.querySelector(\"#results\");\n\nfileUploader.addEventListener('change', (event) => {\n  const file = event.target.files[0];\n  results.style.opacity = 1;\n\n  var img = document.querySelector(\"#original\");\n\n  img.onload = function() {\n    wasm.then(bnw => {\n\n      const withLum = document.querySelector(\"#luminocity\");\n      withLum.src = bnw.grayscale_with_luminocity(img);\n      withLum.style.width = img.width;\n      withLum.style.height = img.height;\n\n      const avg = document.querySelector(\"#average\");\n      avg.src = bnw.grayscale_with_average(img);\n      avg.style.width = img.width;\n      avg.style.height = img.height;\n    }).catch(console.error);\n  }\n\n  img.src = URL.createObjectURL(file);\n})\n\n\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
