@@ -1,0 +1,22 @@
+{
+  "name": "image-black-white",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "serve": "webpack-dev-server",
+    "build": "sh ./build.sh",
+    "build-debug": "cargo +nightly build --target wasm32-unknown-unknown && wasm-bindgen target/wasm32-unknown-unknown/debug/wasm_image_to_black_white.wasm --out-dir .",
+    "build-release": "cargo +nightly build --release --target wasm32-unknown-unknown && wasm-bindgen target/wasm32-unknown-unknown/release/wasm_image_to_black_white.wasm --out-dir .",
+    "bundle": "npm run build-release && webpack"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
