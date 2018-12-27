@@ -6,5 +6,3 @@ Cargo.lock
 **/pkg/
 wasm-pack.log
 package-lock.json
-
-wasm_image_to_black_white.js

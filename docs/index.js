@@ -52,89 +52,89 @@
 /******/ 	function promiseResolve() { return Promise.resolve(); }
 /******/
 /******/ 	var wasmImportObjects = {
-/******/ 		"./wasm_image_to_black_white_bg.wasm": function() {
+/******/ 		"./docs/wasm_image_to_black_white_bg.wasm": function() {
 /******/ 			return {
 /******/ 				"./wasm_image_to_black_white": {
 /******/ 					"__wbindgen_object_drop_ref": function(p0i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__wbindgen_object_drop_ref"](p0i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbindgen_object_drop_ref"](p0i32);
 /******/ 					},
 /******/ 					"__widl_instanceof_Window": function(p0i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_instanceof_Window"](p0i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_instanceof_Window"](p0i32);
 /******/ 					},
 /******/ 					"__widl_instanceof_CanvasRenderingContext2D": function(p0i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_instanceof_CanvasRenderingContext2D"](p0i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_instanceof_CanvasRenderingContext2D"](p0i32);
 /******/ 					},
 /******/ 					"__widl_f_draw_image_with_html_image_element_CanvasRenderingContext2D": function(p0i32,p1i32,p2f64,p3f64,p4i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_draw_image_with_html_image_element_CanvasRenderingContext2D"](p0i32,p1i32,p2f64,p3f64,p4i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_draw_image_with_html_image_element_CanvasRenderingContext2D"](p0i32,p1i32,p2f64,p3f64,p4i32);
 /******/ 					},
 /******/ 					"__widl_f_get_image_data_CanvasRenderingContext2D": function(p0i32,p1f64,p2f64,p3f64,p4f64,p5i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_get_image_data_CanvasRenderingContext2D"](p0i32,p1f64,p2f64,p3f64,p4f64,p5i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_get_image_data_CanvasRenderingContext2D"](p0i32,p1f64,p2f64,p3f64,p4f64,p5i32);
 /******/ 					},
 /******/ 					"__widl_f_put_image_data_CanvasRenderingContext2D": function(p0i32,p1i32,p2f64,p3f64,p4i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_put_image_data_CanvasRenderingContext2D"](p0i32,p1i32,p2f64,p3f64,p4i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_put_image_data_CanvasRenderingContext2D"](p0i32,p1i32,p2f64,p3f64,p4i32);
 /******/ 					},
 /******/ 					"__widl_f_create_element_Document": function(p0i32,p1i32,p2i32,p3i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_create_element_Document"](p0i32,p1i32,p2i32,p3i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_create_element_Document"](p0i32,p1i32,p2i32,p3i32);
 /******/ 					},
 /******/ 					"__widl_instanceof_HTMLCanvasElement": function(p0i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_instanceof_HTMLCanvasElement"](p0i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_instanceof_HTMLCanvasElement"](p0i32);
 /******/ 					},
 /******/ 					"__widl_f_get_context_HTMLCanvasElement": function(p0i32,p1i32,p2i32,p3i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_get_context_HTMLCanvasElement"](p0i32,p1i32,p2i32,p3i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_get_context_HTMLCanvasElement"](p0i32,p1i32,p2i32,p3i32);
 /******/ 					},
 /******/ 					"__widl_f_to_data_url_with_type_HTMLCanvasElement": function(p0i32,p1i32,p2i32,p3i32,p4i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_to_data_url_with_type_HTMLCanvasElement"](p0i32,p1i32,p2i32,p3i32,p4i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_to_data_url_with_type_HTMLCanvasElement"](p0i32,p1i32,p2i32,p3i32,p4i32);
 /******/ 					},
 /******/ 					"__widl_f_set_width_HTMLCanvasElement": function(p0i32,p1i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_set_width_HTMLCanvasElement"](p0i32,p1i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_set_width_HTMLCanvasElement"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__widl_f_set_height_HTMLCanvasElement": function(p0i32,p1i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_set_height_HTMLCanvasElement"](p0i32,p1i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_set_height_HTMLCanvasElement"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__widl_f_width_HTMLImageElement": function(p0i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_width_HTMLImageElement"](p0i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_width_HTMLImageElement"](p0i32);
 /******/ 					},
 /******/ 					"__widl_f_height_HTMLImageElement": function(p0i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_height_HTMLImageElement"](p0i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_height_HTMLImageElement"](p0i32);
 /******/ 					},
 /******/ 					"__widl_f_new_with_u8_clamped_array_and_sh_ImageData": function(p0i32,p1i32,p2i32,p3i32,p4i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_new_with_u8_clamped_array_and_sh_ImageData"](p0i32,p1i32,p2i32,p3i32,p4i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_new_with_u8_clamped_array_and_sh_ImageData"](p0i32,p1i32,p2i32,p3i32,p4i32);
 /******/ 					},
 /******/ 					"__widl_f_data_ImageData": function(p0i32,p1i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_data_ImageData"](p0i32,p1i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_data_ImageData"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__widl_f_document_Window": function(p0i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__widl_f_document_Window"](p0i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_f_document_Window"](p0i32);
 /******/ 					},
 /******/ 					"__wbg_call_582b20dfcad7fee4": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__wbg_call_582b20dfcad7fee4"](p0i32,p1i32,p2i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbg_call_582b20dfcad7fee4"](p0i32,p1i32,p2i32);
 /******/ 					},
 /******/ 					"__wbg_newnoargs_6a80f84471205fc8": function(p0i32,p1i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__wbg_newnoargs_6a80f84471205fc8"](p0i32,p1i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbg_newnoargs_6a80f84471205fc8"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbindgen_number_get": function(p0i32,p1i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__wbindgen_number_get"](p0i32,p1i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbindgen_number_get"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbindgen_string_get": function(p0i32,p1i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__wbindgen_string_get"](p0i32,p1i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbindgen_string_get"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbindgen_boolean_get": function(p0i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__wbindgen_boolean_get"](p0i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbindgen_boolean_get"](p0i32);
 /******/ 					},
 /******/ 					"__wbindgen_object_clone_ref": function(p0i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__wbindgen_object_clone_ref"](p0i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbindgen_object_clone_ref"](p0i32);
 /******/ 					},
 /******/ 					"__wbindgen_is_null": function(p0i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__wbindgen_is_null"](p0i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbindgen_is_null"](p0i32);
 /******/ 					},
 /******/ 					"__wbindgen_is_undefined": function(p0i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__wbindgen_is_undefined"](p0i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbindgen_is_undefined"](p0i32);
 /******/ 					},
 /******/ 					"__wbindgen_is_symbol": function(p0i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__wbindgen_is_symbol"](p0i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbindgen_is_symbol"](p0i32);
 /******/ 					},
 /******/ 					"__wbindgen_throw": function(p0i32,p1i32) {
-/******/ 						return installedModules["./wasm_image_to_black_white.js"].exports["__wbindgen_throw"](p0i32,p1i32);
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbindgen_throw"](p0i32,p1i32);
 /******/ 					}
 /******/ 				}
 /******/ 			};
@@ -224,7 +224,7 @@
 /******/
 /******/ 		// Fetch + compile chunk loading for webassembly
 /******/
-/******/ 		var wasmModules = {"1":["./wasm_image_to_black_white_bg.wasm"]}[chunkId] || [];
+/******/ 		var wasmModules = {"1":["./docs/wasm_image_to_black_white_bg.wasm"]}[chunkId] || [];
 /******/
 /******/ 		wasmModules.forEach(function(wasmModuleId) {
 /******/ 			var installedWasmModuleData = installedWasmModules[wasmModuleId];
@@ -234,7 +234,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + {"./wasm_image_to_black_white_bg.wasm":"23263c79d60860b6201a"}[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + {"./docs/wasm_image_to_black_white_bg.wasm":"dd1772c6324aa8f8d36f"}[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 				if(importObject instanceof Promise && typeof WebAssembly.compileStreaming === 'function') {
 /******/ 					promise = Promise.all([WebAssembly.compileStreaming(req), importObject]).then(function(items) {
@@ -335,7 +335,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const wasm = Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./wasm_image_to_black_white */ \"./wasm_image_to_black_white.js\"));\n\nconst fileUploader = document.querySelector(\"#uploadfile\");\nconst results = document.querySelector(\"#results\");\n\nfileUploader.addEventListener('change', (event) => {\n  const file = event.target.files[0];\n  results.style.opacity = 1;\n\n  var img = document.querySelector(\"#original\");\n\n  img.onload = function() {\n    wasm.then(bnw => {\n\n      const withLum = document.querySelector(\"#luminocity\");\n      withLum.src = bnw.grayscale_with_luminocity(img);\n      withLum.style.width = img.width;\n      withLum.style.height = img.height;\n\n      const avg = document.querySelector(\"#average\");\n      avg.src = bnw.grayscale_with_average(img);\n      avg.style.width = img.width;\n      avg.style.height = img.height;\n    }).catch(console.error);\n  }\n\n  img.src = URL.createObjectURL(file);\n})\n\n\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("const wasm = Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./docs/wasm_image_to_black_white */ \"./docs/wasm_image_to_black_white.js\"));\n\nconst fileUploader = document.querySelector(\"#uploadfile\");\nconst results = document.querySelector(\"#results\");\n\nfileUploader.addEventListener('change', (event) => {\n  const file = event.target.files[0];\n  results.style.opacity = 1;\n\n  var img = document.querySelector(\"#original\");\n\n  img.onload = function() {\n    wasm.then(bnw => {\n\n      const withLum = document.querySelector(\"#luminocity\");\n      withLum.src = bnw.grayscale_with_luminocity(img);\n      withLum.style.width = img.width;\n      withLum.style.height = img.height;\n\n      const avg = document.querySelector(\"#average\");\n      avg.src = bnw.grayscale_with_average(img);\n      avg.style.width = img.width;\n      avg.style.height = img.height;\n    }).catch(console.error);\n  }\n\n  img.src = URL.createObjectURL(file);\n})\n\n\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
