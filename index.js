@@ -1,4 +1,4 @@
-const wasm = import("wasm-image-to-black-white");
+const wasm = import("./docs/wasm_image_to_black_white");
 
 setTimeout(() => {
   const fileUploader = document.querySelector("#uploadfile");
@@ -7,6 +7,7 @@ setTimeout(() => {
   fileUploader.addEventListener('change', (event) => {
     const file = event.target.files[0];
     results.style.opacity = 1;
+    console.info('Open File');
   
     var img = document.querySelector("#original");
   
@@ -18,7 +19,7 @@ setTimeout(() => {
           withLum.src = bnw.grayscale_with_luminocity(img);
           withLum.width = img.width;
           withLum.height = img.height;
-          console.info(img.width, img.height);
+          console.info(`Image dimensions ${img.width} ${img.height}`);
     
           const avg = document.querySelector("#average");
           avg.src = bnw.grayscale_with_average(img);
