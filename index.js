@@ -11,17 +11,21 @@ setTimeout(() => {
     var img = document.querySelector("#original");
   
     img.onload = function() {
-      wasm.then(bnw => {
-        const withLum = document.querySelector("#luminocity");
-        withLum.src = bnw.grayscale_with_luminocity(img);
-        withLum.width = img.width;
-        withLum.height = img.height;
-  
-        const avg = document.querySelector("#average");
-        avg.src = bnw.grayscale_with_average(img);
-        avg.width = img.width;
-        avg.height = img.height;
-      }).catch(console.error);
+
+      setTimeout(()=> {
+        wasm.then(bnw => {
+          const withLum = document.querySelector("#luminocity");
+          withLum.src = bnw.grayscale_with_luminocity(img);
+          withLum.width = img.width;
+          withLum.height = img.height;
+          console.info(img.width, img.height);
+    
+          const avg = document.querySelector("#average");
+          avg.src = bnw.grayscale_with_average(img);
+          avg.width = img.width;
+          avg.height = img.height;
+        }).catch(console.error);
+      }, 100);
     }
   
     img.src = URL.createObjectURL(file);

@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + ".index." + "58c7df2ac8d2db60434b" + ".js"
+/******/ 		return __webpack_require__.p + "" + chunkId + ".index." + "9e4c3b8df66b138f9d44" + ".js"
 /******/ 	}
 /******/
 /******/ 	// object to store loaded and loading wasm modules
@@ -335,7 +335,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const wasm = __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! wasm-image-to-black-white */ \"./node_modules/wasm-image-to-black-white/wasm_image_to_black_white.js\"));\n\nsetTimeout(() => {\n  const fileUploader = document.querySelector(\"#uploadfile\");\n  const results = document.querySelector(\"#results\");\n\n  fileUploader.addEventListener('change', (event) => {\n    const file = event.target.files[0];\n    results.style.opacity = 1;\n  \n    var img = document.querySelector(\"#original\");\n  \n    img.onload = function() {\n      wasm.then(bnw => {\n        const withLum = document.querySelector(\"#luminocity\");\n        withLum.src = bnw.grayscale_with_luminocity(img);\n        withLum.width = img.width;\n        withLum.height = img.height;\n  \n        const avg = document.querySelector(\"#average\");\n        avg.src = bnw.grayscale_with_average(img);\n        avg.width = img.width;\n        avg.height = img.height;\n      }).catch(console.error);\n    }\n  \n    img.src = URL.createObjectURL(file);\n  })\n}, 1000);\n\n\n\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("const wasm = __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! wasm-image-to-black-white */ \"./node_modules/wasm-image-to-black-white/wasm_image_to_black_white.js\"));\n\nsetTimeout(() => {\n  const fileUploader = document.querySelector(\"#uploadfile\");\n  const results = document.querySelector(\"#results\");\n\n  fileUploader.addEventListener('change', (event) => {\n    const file = event.target.files[0];\n    results.style.opacity = 1;\n  \n    var img = document.querySelector(\"#original\");\n  \n    img.onload = function() {\n\n      setTimeout(()=> {\n        wasm.then(bnw => {\n          const withLum = document.querySelector(\"#luminocity\");\n          withLum.src = bnw.grayscale_with_luminocity(img);\n          withLum.width = img.width;\n          withLum.height = img.height;\n          console.info(img.width, img.height);\n    \n          const avg = document.querySelector(\"#average\");\n          avg.src = bnw.grayscale_with_average(img);\n          avg.width = img.width;\n          avg.height = img.height;\n        }).catch(console.error);\n      }, 100);\n    }\n  \n    img.src = URL.createObjectURL(file);\n  })\n}, 1000);\n\n\n\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
