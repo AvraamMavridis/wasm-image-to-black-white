@@ -99,6 +99,54 @@ export function grayscale_with_luminocity(arg0) {
 
 }
 
+/**
+* @param {any} arg0
+* @returns {string}
+*/
+export function grayscale_with_BT601(arg0) {
+    const retptr = globalArgumentPtr();
+    try {
+        wasm.grayscale_with_BT601(retptr, addBorrowedObject(arg0));
+        const mem = getUint32Memory();
+        const rustptr = mem[retptr / 4];
+        const rustlen = mem[retptr / 4 + 1];
+
+        const realRet = getStringFromWasm(rustptr, rustlen).slice();
+        wasm.__wbindgen_free(rustptr, rustlen * 1);
+        return realRet;
+
+
+    } finally {
+        heap[stack_pointer++] = undefined;
+
+    }
+
+}
+
+/**
+* @param {any} arg0
+* @returns {string}
+*/
+export function grayscale_with_desaturation(arg0) {
+    const retptr = globalArgumentPtr();
+    try {
+        wasm.grayscale_with_desaturation(retptr, addBorrowedObject(arg0));
+        const mem = getUint32Memory();
+        const rustptr = mem[retptr / 4];
+        const rustlen = mem[retptr / 4 + 1];
+
+        const realRet = getStringFromWasm(rustptr, rustlen).slice();
+        wasm.__wbindgen_free(rustptr, rustlen * 1);
+        return realRet;
+
+
+    } finally {
+        heap[stack_pointer++] = undefined;
+
+    }
+
+}
+
 function getObject(idx) { return heap[idx]; }
 
 export function __widl_instanceof_CanvasRenderingContext2D(idx) {

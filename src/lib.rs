@@ -11,7 +11,7 @@ use web_sys::ImageData;
 struct Color {
     red: u8,
     green: u8,
-    black: u8,
+    blue: u8,
     alpha: u8,
 }
 
@@ -82,10 +82,10 @@ fn draw_image(img: &web_sys::HtmlImageElement, transform: &Fn(&Color) -> u8) -> 
     for (i, pixel) in pixels.iter().enumerate().step_by(4) {
         let red = pixels[i];
         let green = pixels[i+1];
-        let black = pixels[i+2];
+        let blue = pixels[i+2];
         let alpha = pixels[i+3];
         let color = Color {
-            red, green, black, alpha
+            red, green, blue, alpha
         };
 
         let avg = transform(&color);
@@ -113,7 +113,7 @@ fn draw_image(img: &web_sys::HtmlImageElement, transform: &Fn(&Color) -> u8) -> 
 #[wasm_bindgen]
 pub fn grayscale_with_average(img: &web_sys::HtmlImageElement) -> String {
     fn grayscale_avg(color: &Color) -> u8 {
-        let sum = (color.green as i32 + color.red as i32 + color.black as i32 + color.alpha as i32) as f32 / 4.0;
+        let sum = (color.green as i32 + color.red as i32 + color.blue as i32 + color.alpha as i32) as f32 / 4.0;
         sum as u8
     }
 
@@ -125,15 +125,47 @@ pub fn grayscale_with_luminocity(img: &web_sys::HtmlImageElement) -> String {
     fn grayscale_luminocity(color: &Color) -> u8 {
         let red_factor = 0.21;
         let green_factor = 0.72;
-        let black_factor = 0.07;
+        let blue_factor = 0.07;
 
         let green = (color.green as f32) * green_factor;
         let red = (color.red as f32) * red_factor;
-        let black = (color.black as f32) * black_factor;
+        let blue = (color.blue as f32) * blue_factor;
 
-        let sum = green + red + black;
+        let sum = green + red + blue;
         sum as u8
     }
 
     draw_image(img, &grayscale_luminocity)
+}
+
+#[wasm_bindgen]
+pub fn grayscale_with_BT601(img: &web_sys::HtmlImageElement) -> String {
+    fn grayscale_BT601(color: &Color) -> u8 {
+        let red_factor = 0.299;
+        let green_factor = 0.587;
+        let blue_factor = 0.114;
+
+        let green = (color.green as f32) * green_factor;
+        let red = (color.red as f32) * red_factor;
+        let blue = (color.blue as f32) * blue_factor;
+
+        let sum = green + red + blue;
+        sum as u8
+    }
+
+    draw_image(img, &grayscale_BT601)
+}
+
+#[wasm_bindgen]
+pub fn grayscale_with_desaturation(img: &web_sys::HtmlImageElement) -> String {
+    fn grayscale_desaturation(color: &Color) -> u8 {
+        let color = [color.green as u8, color.red as u8, color.blue as u8];
+        let min = color.iter().min().unwrap();
+        let max = color.iter().max().unwrap();
+
+        let sum = ((min + max) as f32) / 2 as f32;
+        sum as u8
+    }
+
+    draw_image(img, &grayscale_desaturation)
 }

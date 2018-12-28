@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + ".index." + "110d9c258a1fd75389fc" + ".js"
+/******/ 		return __webpack_require__.p + "" + chunkId + ".index." + "db0e0c0f50b762211d13" + ".js"
 /******/ 	}
 /******/
 /******/ 	// object to store loaded and loading wasm modules
@@ -237,7 +237,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + {"./docs/wasm_image_to_black_white_bg.wasm":"b398b925a3053918cea2"}[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + {"./docs/wasm_image_to_black_white_bg.wasm":"d742eba473f73023a185"}[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 				if(importObject instanceof Promise && typeof WebAssembly.compileStreaming === 'function') {
 /******/ 					promise = Promise.all([WebAssembly.compileStreaming(req), importObject]).then(function(items) {
@@ -338,7 +338,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const wasm = Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./docs/wasm_image_to_black_white */ \"./docs/wasm_image_to_black_white.js\"));\n\nsetTimeout(() => {\n  const fileUploader = document.querySelector(\"#uploadfile\");\n  const results = document.querySelector(\"#results\");\n\n  fileUploader.addEventListener('change', (event) => {\n    const file = event.target.files[0];\n    results.style.opacity = 1;\n    console.info('Open File');\n  \n    var img = document.querySelector(\"#original\");\n  \n    img.onload = function() {\n\n      setTimeout(()=> {\n        wasm.then(bnw => {\n          const withLum = document.querySelector(\"#luminocity\");\n          withLum.src = bnw.grayscale_with_luminocity(img);\n          withLum.width = img.width;\n          withLum.height = img.height;\n          console.info(`Image dimensions ${img.width} ${img.height}`);\n    \n          const avg = document.querySelector(\"#average\");\n          avg.src = bnw.grayscale_with_average(img);\n          avg.width = img.width;\n          avg.height = img.height;\n        }).catch(console.error);\n      }, 100);\n    }\n  \n    img.src = URL.createObjectURL(file);\n  })\n}, 1000);\n\n\n\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("const wasm = Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./docs/wasm_image_to_black_white */ \"./docs/wasm_image_to_black_white.js\"));\n\nsetTimeout(() => {\n  const fileUploader = document.querySelector(\"#uploadfile\");\n  const results = document.querySelector(\"#results\");\n\n  fileUploader.addEventListener('change', (event) => {\n    const file = event.target.files[0];\n    results.style.opacity = 1;\n    console.info('Open File');\n  \n    var img = document.querySelector(\"#original\");\n  \n    img.onload = function() {\n\n      setTimeout(()=> {\n        wasm.then(bnw => {\n          const withLum = document.querySelector(\"#luminocity\");\n          withLum.src = bnw.grayscale_with_luminocity(img);\n          withLum.width = img.width;\n          withLum.height = img.height;\n    \n          const avg = document.querySelector(\"#average\");\n          avg.src = bnw.grayscale_with_average(img);\n          avg.width = img.width;\n          avg.height = img.height;\n\n          const bt601 = document.querySelector(\"#bt601\");\n          bt601.src = bnw.grayscale_with_BT601(img);\n          bt601.width = img.width;\n          bt601.height = img.height;\n\n          const desaturation = document.querySelector(\"#desaturation\");\n          desaturation.src = bnw.grayscale_with_desaturation(img);\n          desaturation.width = img.width;\n          desaturation.height = img.height;\n        }).catch(console.error);\n      }, 100);\n    }\n  \n    img.src = URL.createObjectURL(file);\n  })\n}, 1000);\n\n\n\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 

@@ -60,7 +60,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
-<script type="text/javascript" src="index.110d9c258a1fd75389fc.js"></script></head>
+<script type="text/javascript" src="index.db0e0c0f50b762211d13.js"></script></head>
 
 <body>
   <div class="control">
@@ -93,6 +93,26 @@ wasm.then(bnw => {
           </code></pre>
         <img id="luminocity" />
       </div>
+      <div class="result">
+        <label>BT.601:</label>
+        <pre><code class="javascript">
+  const wasm = import("wasm-image-to-black-white");
+  wasm.then(bnw => {
+    img.src = bnw.grayscale_with_BT601(img);
+  });
+            </code></pre>
+        <img id="bt601" />
+      </div>
+      <div class="result">
+          <label>Desaturation:</label>
+          <pre><code class="javascript">
+    const wasm = import("wasm-image-to-black-white");
+    wasm.then(bnw => {
+      img.src = bnw.grayscale_with_desaturation(img);
+    });
+              </code></pre>
+          <img id="desaturation" />
+        </div>
     </div>
   </div>
 </body>

@@ -19,12 +19,21 @@ setTimeout(() => {
           withLum.src = bnw.grayscale_with_luminocity(img);
           withLum.width = img.width;
           withLum.height = img.height;
-          console.info(`Image dimensions ${img.width} ${img.height}`);
     
           const avg = document.querySelector("#average");
           avg.src = bnw.grayscale_with_average(img);
           avg.width = img.width;
           avg.height = img.height;
+
+          const bt601 = document.querySelector("#bt601");
+          bt601.src = bnw.grayscale_with_BT601(img);
+          bt601.width = img.width;
+          bt601.height = img.height;
+
+          const desaturation = document.querySelector("#desaturation");
+          desaturation.src = bnw.grayscale_with_desaturation(img);
+          desaturation.width = img.width;
+          desaturation.height = img.height;
         }).catch(console.error);
       }, 100);
     }
