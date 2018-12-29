@@ -40,6 +40,32 @@ wasm.then(bnw => {
 
 <img src="https://raw.githubusercontent.com/AvraamMavridis/wasm-image-to-black-white/master/images/luminocity.png?token=AARUKgXRUizvLUAkL8sjv2aMWqPMYjwIks5cLiVjwA%3D%3D" />
 
+### Desaturation
+
+`Gray = ( Max(Red, Green, Blue) + Min(Red, Green, Blue) ) / 2)`
+
+```js
+const wasm = import("wasm-image-to-black-white");
+wasm.then(bnw => {
+  img.src = bnw.grayscale_with_desaturation(img);
+});        
+```
+
+<img src="https://raw.githubusercontent.com/AvraamMavridis/wasm-image-to-black-white/master/images/desaturation.png" />
+
+### BT601
+
+`Gray = (Red * 0.299 + Green * 0.587 + Blue * 0.114)`
+
+```js
+const wasm = import("wasm-image-to-black-white");
+wasm.then(bnw => {
+  img.src = bnw.grayscale_with_BT601(img);
+});            
+```
+
+<img src="https://raw.githubusercontent.com/AvraamMavridis/wasm-image-to-black-white/master/images/bt601.png" />
+
 
 
 # Example
