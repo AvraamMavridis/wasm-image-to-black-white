@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + ".index." + "81fea22d92219929cd5e" + ".js"
+/******/ 		return __webpack_require__.p + "" + chunkId + ".index." + "be3fa38d02f98b568c53" + ".js"
 /******/ 	}
 /******/
 /******/ 	// object to store loaded and loading wasm modules
@@ -58,8 +58,8 @@
 /******/ 					"__wbindgen_object_drop_ref": function(p0i32) {
 /******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbindgen_object_drop_ref"](p0i32);
 /******/ 					},
-/******/ 					"__wbg_log_f09fe17bdb15753b": function(p0i32,p1i32) {
-/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbg_log_f09fe17bdb15753b"](p0i32,p1i32);
+/******/ 					"__wbg_log_7b4d911083810178": function(p0i32,p1i32) {
+/******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__wbg_log_7b4d911083810178"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__widl_instanceof_Window": function(p0i32) {
 /******/ 						return installedModules["./docs/wasm_image_to_black_white.js"].exports["__widl_instanceof_Window"](p0i32);
@@ -237,7 +237,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + {"./docs/wasm_image_to_black_white_bg.wasm":"876df1ddaecc63ced6d5"}[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + {"./docs/wasm_image_to_black_white_bg.wasm":"2a2db4dc8a5c7f485738"}[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 				if(importObject instanceof Promise && typeof WebAssembly.compileStreaming === 'function') {
 /******/ 					promise = Promise.all([WebAssembly.compileStreaming(req), importObject]).then(function(items) {

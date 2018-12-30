@@ -17,7 +17,7 @@ function getStringFromWasm(ptr, len) {
     return cachedTextDecoder.decode(getUint8Memory().subarray(ptr, ptr + len));
 }
 
-export function __wbg_log_f09fe17bdb15753b(arg0, arg1) {
+export function __wbg_log_7b4d911083810178(arg0, arg1) {
     let varg0 = getStringFromWasm(arg0, arg1);
     console.log(varg0);
 }
