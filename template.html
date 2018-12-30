@@ -97,20 +97,20 @@ wasm.then(bnw => {
       <div class="result">
         <label>BT.601:</label>
         <pre><code class="javascript">
-  const wasm = import("wasm-image-to-black-white");
-  wasm.then(bnw => {
-    img.src = bnw.grayscale_with_BT601(img);
-  });
+const wasm = import("wasm-image-to-black-white");
+wasm.then(bnw => {
+  img.src = bnw.grayscale_with_BT601(img);
+});
             </code></pre>
         <img id="bt601" />
       </div>
       <div class="result">
           <label>Desaturation:</label>
           <pre><code class="javascript">
-    const wasm = import("wasm-image-to-black-white");
-    wasm.then(bnw => {
-      img.src = bnw.grayscale_with_desaturation(img);
-    });
+const wasm = import("wasm-image-to-black-white");
+wasm.then(bnw => {
+  img.src = bnw.grayscale_with_desaturation(img);
+});
               </code></pre>
           <img id="desaturation" />
         </div>

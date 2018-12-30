@@ -60,7 +60,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
-<script type="text/javascript" src="index.40768a4904460356394a.js"></script></head>
+<script type="text/javascript" src="index.81fea22d92219929cd5e.js"></script></head>
 
 <body>
     <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
@@ -97,20 +97,20 @@ wasm.then(bnw => {
       <div class="result">
         <label>BT.601:</label>
         <pre><code class="javascript">
-  const wasm = import("wasm-image-to-black-white");
-  wasm.then(bnw => {
-    img.src = bnw.grayscale_with_BT601(img);
-  });
+const wasm = import("wasm-image-to-black-white");
+wasm.then(bnw => {
+  img.src = bnw.grayscale_with_BT601(img);
+});
             </code></pre>
         <img id="bt601" />
       </div>
       <div class="result">
           <label>Desaturation:</label>
           <pre><code class="javascript">
-    const wasm = import("wasm-image-to-black-white");
-    wasm.then(bnw => {
-      img.src = bnw.grayscale_with_desaturation(img);
-    });
+const wasm = import("wasm-image-to-black-white");
+wasm.then(bnw => {
+  img.src = bnw.grayscale_with_desaturation(img);
+});
               </code></pre>
           <img id="desaturation" />
         </div>
